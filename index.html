@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>סידור עבודה</title>
+<meta name="theme-color" content="#1d2866">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="סידור עבודה">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon-180.png">
+<link rel="icon" type="image/png" href="favicon-64.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <img src="icon-192.png" alt="" class="logo" width="88" height="88">
+    <h1>סידור עבודה</h1>
+    <p class="sub">מערך הטקסטיל · וולפסון</p>
+  </header>
+
+  <!-- נפתח רק כשיש קישור אישי -->
+  <section id="ready" class="card" hidden>
+    <button id="open" class="primary" type="button">📅 לסידור שלי</button>
+    <p id="auto" class="muted" hidden>פותח את הסידור…</p>
+  </section>
+
+  <!-- הוראות התקנה: מוצגות בפעם הראשונה, ממסך רגיל בדפדפן -->
+  <section id="install" class="card" hidden>
+    <h2>להוסיף כפתור למסך הבית</h2>
+    <div id="ios" hidden>
+      <ol>
+        <li>לוחצים על <b>שיתוף</b> <span class="ic">⬆︎</span> בתחתית Safari</li>
+        <li>בוחרים <b>הוספה למסך הבית</b></li>
+        <li>לוחצים <b>הוספה</b> – וזהו!</li>
+      </ol>
+      <p class="muted">חשוב לפתוח את הקישור ב־Safari (לא מתוך וואטסאפ). אם נפתח בוואטסאפ: ⋯ › פתיחה ב־Safari.</p>
+    </div>
+    <div id="android" hidden>
+      <button id="installBtn" class="secondary" type="button" hidden>📲 התקנה במסך הבית</button>
+      <ol id="androidSteps">
+        <li>לוחצים על <b>⋮</b> בפינה של Chrome</li>
+        <li>בוחרים <b>הוספה למסך הבית</b> או <b>התקנת האפליקציה</b></li>
+      </ol>
+    </div>
+    <div id="desktop" hidden>
+      <p>פותחים את הקישור הזה בטלפון כדי להוסיף כפתור למסך הבית.</p>
+    </div>
+  </section>
+
+  <!-- בלי קישור אישי -->
+  <section id="nolink" class="card" hidden>
+    <h2>צריך קישור אישי</h2>
+    <p>הקישור האישי שלך נשלח אליך ע״י המנהל. פותחים אותו פעם אחת – ומאז הכפתור במסך הבית יזכור אותך.</p>
+  </section>
+
+  <footer class="foot">
+    <button id="forget" class="link" type="button" hidden>שכחת את המכשיר הזה</button>
+    <p class="muted small">הקישור האישי נשמר רק בטלפון שלך. לא לשתף צילומי מסך של שורת הכתובת.</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
