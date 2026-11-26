@@ -36,7 +36,7 @@
   var t = fromHash() || clean(store(true));
   if (fromHash()) store(false, t);
 
-  function go(replace) { var u = APP_URL + '?t=' + encodeURIComponent(t); if (replace) location.replace(u); else location.href = u; }
+  function go(replace) { var u = APP_URL + '?t=' + encodeURIComponent(t) + '&src=app'; if (replace) location.replace(u); else location.href = u; }
 
   if (!t) { show('nolink', true); return; }
 
